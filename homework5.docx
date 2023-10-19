@@ -1,0 +1,169 @@
+1002150287
+Name: Mahad Imran
+
+Problem 1 – 12 pts.
+What does the following code print?
+#include <stdio.h>
+
+int main()
+{
+    int a = 24;
+    int b = 42;
+
+    while (b != 0)
+    {
+        int t = b;
+        b = a % b;
+        a = t;
+        printf("a = %d, b = %d\n", a, b);
+    }
+    return 0;
+}
+
+a = 42, b = 24
+a = 24, b = 18
+a = 18, b = 6
+a = 6, b = 0
+ 
+Problem 2 – 10 pts
+What does the following code print?
+#include <stdio.h>
+
+int main()
+{
+    int a = 3;
+    int b = 6;
+    while (a < b)
+    {
+        a += 2;
+        b++;
+        printf("a = %d, b = %d\n", a, b);
+    }
+    return 0;
+}
+
+(the text box will not let me go to a new line so I have written answer outside it)
+a = 5, b = 7
+a = 7, b = 8
+a = 9, b = 9
+ 
+Problem 3 – 12 pts.
+What does the following code print?
+#include <stdio.h>
+
+int main()
+{
+    int a = 65;
+    int limit = 50;
+    while (a != limit)
+    {
+      a = limit - (limit-a)/2;
+      printf("a = %2d\n", a);
+    }
+    return 0;
+}
+
+a = 57
+a = 53
+a = 51
+a = 50
+
+ 
+Problem 4 – 
+What does the following code print?
+#include <stdio.h>
+
+int main()
+{
+    int x = 7;
+    int y = -10;
+    int z = 5;
+    do
+    {
+        printf("%d %d %d\n", x, y, z);
+        if (x == 2)
+        {
+            x -= y;
+        }
+        else
+        {
+            x -= z;
+        }
+        printf("%d %d %d\n", x, y, z);
+        x -= y;
+        z =- x;
+    } while (x < 7);
+    printf("%d %d %d\n", x, y, z);
+    return 0;
+}
+
+7 -10 5
+2 -10 5
+12 -10 -12
+  
+Problem 5 –  pts
+The extraterrestrials living in the planet Numerion revere a specific type of integers N. In particular, for those creatures, an integer N is holy if there exists an integer i >= 1 such that: 
+N = i*i + i
+Here are some examples of holy numbers: 
+2 (because 2 = 1*1 + 1)
+6 (because 6 = 2*2 + 2)
+12 (because 12 = 3*3 + 3)
+In a file called problem5.c, write a program that: 
+•	Asks the user to enter an integer N. It is OK if your program crashes when the user does not enter a valid integer. 
+•	Prints out whether that number is a holy number in planet Numerion. 
+•	The program should continue running until the user enters -1 to quit.
+Here is an example of the output from this program: 
+Enter an integer N or -1 to quit: 4
+4 is not a holy number in Numerion.
+Enter an integer N or -1 to quit: 6
+6 is a holy number in Numerion, because 2*2+2 = 6
+Enter an integer N or -1 to quit: -1
+
+Note that it kept running until I entered -1. Hint: This is a smoking gun problem, like determining if a number is prime.
+ 
+Problem 6 – 18 pts
+In a file called problem6.c, write a program satisfying these specs:
+•	It asks the user to enter an integer called low.
+•	It asks the user to enter an integer called high.
+•	If low ≤ high, the program prints, in ascending order, all integers between low and high (including low and high), except for multiples of 4.
+•	If low > high, the program just prints "no numbers found" and exits. 
+For example, if the user enters 7 for low and 13 for high, your program output should look EXACTLY like this:
+Enter low: 7
+Enter high: 13
+7
+9
+10
+11
+13
+
+As another example, if the user enters 5 for low and 4 for high, your program output should look EXACTLY like this:
+Enter low: 5
+Enter high: 4
+no numbers found
+ 
+Problem 7 – 30 pts.
+In a file called problem7.c, write a program that: 
+•	Asks the user to enter an integer M.
+•	Asks the user to enter an integer N. 
+•	Prints out the number of multiples of 11 that are greater than or equal to M and less than or equal to N. 
+
+For example: if the user enters 10 and 40, the multiples of 11 between those two numbers are 11, 22, 33, and your program output should look EXACTLY like this: 
+Enter an integer M: 10
+Enter an integer N: 40
+3 numbers between 10 and 40 are multiples of 11.
+
+As another example: if the user enters 40 and 10, there are no multiples of 11 that are >= 40 and <= 10, and your program output should look EXACTLY like this: 
+Enter an integer M: 40
+Enter an integer N: 10
+0 numbers between 40 and 10 are multiples of 11.
+
+As another example: if the user enters 70 and 110, the multiples of 11 between those numbers are 77, 88, 99, 110, and your program output should look EXACTLY like this: 
+Enter an integer M: 70
+Enter an integer N: 110
+4 numbers between 70 and 110 are multiples of 11.
+
+
+Submission: 
+Place this Word document and the three program source files (problem5.c, problem6.c, and problem7.c) in a folder and zip the folder. Submit the zip file in Canvas. Make sure that the zip file contains your source code and Word document before submitting.
+
+
